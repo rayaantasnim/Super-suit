@@ -1,0 +1,290 @@
+/* IDAI Quantum Guardian Showcase - Light Theme */
+
+/* Root color variables */
+:root {
+  --primary-white: #ffffff;       /* Pure white base */
+  --accent-blue: #3a7bd5;         /* Gentle sky blue */
+  --accent-gold: #ffd700;         /* Radiant gold */
+  --neutral-gray: #dcdcdc;        /* Soft neutral gray */
+  --light-silver: #f0f0f0;        /* Light silver background */
+  --dark-charcoal: #1c1c1c;       /* Deep contrast text */
+}
+
+p {
+  text-align: justify !important;
+}
+
+img {
+  width: 45% !important;
+}
+
+/* General body styling */
+body {
+  background-color: var(--light-silver);
+  color: var(--dark-charcoal);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section cards */
+.card {
+  background-color: var(--primary-white);
+  border: 3px solid var(--neutral-gray);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(58, 123, 213, 0.3);
+  color: var(--dark-charcoal);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Section headers */
+.card .card-header {
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue));
+  color: var(--dark-charcoal);
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-bottom: 3px solid var(--neutral-gray);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Section body */
+.card .card-body {
+  padding: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Lists inside parts section */
+#parts ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+#parts ul li {
+  margin-bottom: 0.5rem;
+  color: var(--accent-blue);
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--accent-blue);
+  color: var(--primary-white);
+  border: 2px solid var(--neutral-gray);
+  border-radius: 30px;
+  font-weight: bold;
+  padding: 0.6rem 1.6rem;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--accent-gold);
+  color: var(--dark-charcoal);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(58, 123, 213, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(58, 123, 213, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(58, 123, 213, 0); }
+}
+
+/* Badge styling */
+.badge {
+  background-color: var(--accent-blue);
+  color: var(--primary-white);
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Image styling */
+img {
+  width: 100%;
+  max-width: 600px;
+  border: 4px solid var(--neutral-gray);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(58, 123, 213, 0.4);
+  margin: 1rem auto;
+  display: block;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 25px rgba(58, 123, 213, 0.5);
+}
+
+/* Hover effect for div cards */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(58, 123, 213, 0.4), 0 12px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-gold);
+}
+
+/* Optional: header glow on hover */
+.card:hover .card-header {
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue));
+  color: var(--dark-charcoal);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+}
+
+h1{
+  background-color: lightyellow;
+  font-size:40px;
+  font-family: Algerian;
+  text-align: center;
+  padding:10px;
+}
+
+a {
+  display: inline-block;
+  width: auto !important;                /* auto width, fits text */
+  text-decoration: none;
+  text-align: center;
+  background-color: #3498db;   /* main color */
+  color: #fff;                 /* text color */
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover state */
+a:hover {
+  background-color: #2980b9;   /* darker shade */
+  transform: scale(1.05);      /* slight zoom */
+}
+
+/* Active (pressed) state */
+a:active {
+  background-color: #1c5980;   /* even darker shade */
+  transform: scale(0.95);      /* pressed effect */
+}
+
+/* Special class to corrupt/reset all properties */
+a.sp {
+  all: unset;       /* removes all inherited and applied styles */
+  cursor: pointer;  /* optional: keeps pointer cursor */
+}
+
+/* Key Features Section Styling */
+#features {
+  background-color: var(--primary-white);
+  border: 3px solid var(--neutral-gray);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 25px rgba(58, 123, 213, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#features:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(58, 123, 213, 0.4);
+  border-color: var(--accent-gold);
+}
+
+#features .card-header {
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
+  color: var(--dark-charcoal);
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-bottom: 3px solid var(--neutral-gray);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 12px 12px 0 0;
+}
+
+#features img {
+  width: 80%;
+  max-width: 700px;
+  border: 4px solid var(--neutral-gray);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(58, 123, 213, 0.4);
+  margin: 1rem auto;
+  display: block;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+#features img:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+}
+
+#features ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+#features ul li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-left: 5px solid var(--accent-blue);
+  background-color: var(--light-silver);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#features ul li:hover {
+  background-color: var(--primary-white);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 15px rgba(58, 123, 213, 0.3);
+}
+
+#features ul li strong {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#features ul li p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--dark-charcoal);
+  margin: 0;
+  text-align: justify;
+}
+
+
+/* Responsive media query for smaller screens */
+@media (max-width: 1100px) {
+  img {
+    width: 90% !important;
+    max-width: none;
+  }
+
+  .card .card-body {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .card .card-header {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
